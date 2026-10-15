@@ -1,2 +1,0 @@
-- Route identity is expressed as `Origin-Destination` strings (e.g. `Chennai-Bangalore`) consistently across `shipment_records.csv`, `context_notes.csv`, and the output schema.
-- Temporal alignment between shipment weeks and context notes is done by matching `week_of` against note `date` ranges, with `applies_to = All Routes` acting as a global filter.

@@ -1,1 +1,0 @@
-Case-study workspace that pairs the freight-cost anomaly-detection code (freight_watchdog) with its fixed input datasets and the expected output schema.

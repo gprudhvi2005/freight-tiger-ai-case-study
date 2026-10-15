@@ -1,1 +1,0 @@
-pandas for data aggregation; sentence-transformers/all-MiniLM-L6-v2 for local embeddings (cosine similarity); OpenAI-compatible REST client (supports both OpenAI and Azure OpenAI endpoints) for explanation Q&A at temperature 0 with fixed seed; dotenv-style `.env` parsing implemented inline in `config._load_dotenv`.
