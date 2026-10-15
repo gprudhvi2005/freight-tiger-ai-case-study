@@ -1,0 +1,2034 @@
+{
+  "config": {
+    "own_history_weeks": 8,
+    "own_history_threshold_pct": 20.0,
+    "similar_routes_threshold_pct": 20.0,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "retrieval_top_k": 5,
+    "llm_enabled": true,
+    "llm_model": "openai/gpt-oss-20b",
+    "llm_temperature": 0.0,
+    "llm_seed": 42
+  },
+  "n_route_weeks": 728,
+  "n_candidates": 20,
+  "n_flagged": 17,
+  "n_justified": 3,
+  "n_backfills": 17,
+  "notes_parsed": [
+    {
+      "note_id": "N001",
+      "routes": [
+        "Chennai-Bangalore"
+      ],
+      "window": [
+        "2025-02-24",
+        "2025-03-08"
+      ],
+      "direction": "cost_up",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = Chennai-Bangalore; direction: cost_up; magnitude_upper: None; window: explicit date range 2025-02-24..2025-03-08"
+    },
+    {
+      "note_id": "N002",
+      "routes": [
+        "Ahmedabad-Mumbai"
+      ],
+      "window": [
+        "2025-01-20",
+        "2025-01-26"
+      ],
+      "direction": "cost_up",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = Ahmedabad-Mumbai; direction: cost_up; magnitude_upper: None; window: calendar week of the note date (2025-01-20..2025-01-26)"
+    },
+    {
+      "note_id": "N003",
+      "routes": null,
+      "window": [
+        "2025-05-05",
+        null
+      ],
+      "direction": "cost_up",
+      "magnitude_upper_pct": 7.0,
+      "rationale": "scope: applies_to = \"All Routes\"; direction: cost_up; magnitude_upper: 7.0; window: ongoing change starting this week (open-ended)"
+    },
+    {
+      "note_id": "N004",
+      "routes": [],
+      "window": [
+        "2024-03-11",
+        "2024-03-17"
+      ],
+      "direction": "cost_up",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: text says affected routes are not part of this dataset; direction: cost_up; magnitude_upper: None; window: calendar week of the note date (2024-03-11..2024-03-17)"
+    },
+    {
+      "note_id": "N005",
+      "routes": [
+        "Mumbai-Delhi"
+      ],
+      "window": [
+        "2024-07-29",
+        "2024-08-04"
+      ],
+      "direction": "no_effect",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = Mumbai-Delhi; direction: no_effect; magnitude_upper: None; window: calendar week of the note date (2024-07-29..2024-08-04)"
+    },
+    {
+      "note_id": "N006",
+      "routes": null,
+      "window": [
+        "2025-09-22",
+        "2025-09-28"
+      ],
+      "direction": "no_effect",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = \"All Routes\"; direction: no_effect; magnitude_upper: None; window: calendar week of the note date (2025-09-22..2025-09-28)"
+    },
+    {
+      "note_id": "N007",
+      "routes": [
+        "Delhi-Jaipur"
+      ],
+      "window": [
+        "2024-05-20",
+        "2024-05-26"
+      ],
+      "direction": "cost_down",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = Delhi-Jaipur; direction: cost_down; magnitude_upper: None; window: calendar week of the note date (2024-05-20..2024-05-26)"
+    },
+    {
+      "note_id": "N008",
+      "routes": [
+        "Kolkata-Bhubaneswar"
+      ],
+      "window": [
+        "2025-06-09",
+        "2025-06-15"
+      ],
+      "direction": "no_effect",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = Kolkata-Bhubaneswar; direction: no_effect; magnitude_upper: None; window: calendar week of the note date (2025-06-09..2025-06-15)"
+    },
+    {
+      "note_id": "N009",
+      "routes": [
+        "Chennai-Bangalore"
+      ],
+      "window": [
+        "2025-03-17",
+        "2025-03-23"
+      ],
+      "direction": "no_effect",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = Chennai-Bangalore; direction: no_effect; magnitude_upper: None; window: calendar week of the note date (2025-03-17..2025-03-23)"
+    },
+    {
+      "note_id": "N010",
+      "routes": null,
+      "window": [
+        "2025-10-27",
+        "2025-11-02"
+      ],
+      "direction": "no_effect",
+      "magnitude_upper_pct": null,
+      "rationale": "scope: applies_to = \"All Routes\"; direction: no_effect; magnitude_upper: None; window: calendar week of the note date (2025-10-27..2025-11-02)"
+    }
+  ],
+  "rows": [
+    {
+      "route": "Delhi-Jaipur",
+      "week_of": "2024-11-11",
+      "route_type": "Short",
+      "n_shipments": 4,
+      "cost_per_tonne_km": 4.173,
+      "own_pct": 35.52,
+      "sim_pct": 21.03,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5106
+        },
+        {
+          "note_id": "N007",
+          "similarity": 0.4957
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.454
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4257
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4218
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2024-11-11..2024-11-17"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2024-05-20..2024-05-26 does not overlap week 2024-11-11..2024-11-17"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2024-11-11..2024-11-17"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2024-11-11..2024-11-17"
+        }
+      ]
+    },
+    {
+      "route": "Delhi-Jaipur",
+      "week_of": "2024-11-18",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.0906,
+      "own_pct": 27.62,
+      "sim_pct": 19.67,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5151
+        },
+        {
+          "note_id": "N007",
+          "similarity": 0.4966
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4542
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.42
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4198
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2024-11-18..2024-11-24"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2024-05-20..2024-05-26 does not overlap week 2024-11-18..2024-11-24"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2024-11-18..2024-11-24"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Delhi-Jaipur"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2024-11-18..2024-11-24"
+        }
+      ]
+    },
+    {
+      "route": "Ahmedabad-Mumbai",
+      "week_of": "2025-01-20",
+      "route_type": "Medium",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.2904,
+      "own_pct": 29.47,
+      "sim_pct": 22.49,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": true,
+      "matched_note_id": "N002",
+      "matched_similarity": 0.4442,
+      "used_backfill": false,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5275
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4875
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4476
+        },
+        {
+          "note_id": "N002",
+          "similarity": 0.4442
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4154
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2025-01-20..2025-01-26"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Ahmedabad-Mumbai"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Ahmedabad-Mumbai"
+        },
+        {
+          "note_id": "N002",
+          "passed": true,
+          "rejection": null,
+          "detail": "passes all rules: scope, window, direction, magnitude"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Ahmedabad-Mumbai"
+        }
+      ]
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-02-24",
+      "route_type": "Medium",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.5828,
+      "own_pct": 31.46,
+      "sim_pct": 38.67,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": true,
+      "matched_note_id": "N001",
+      "matched_similarity": 0.5741,
+      "used_backfill": false,
+      "retrieved": [
+        {
+          "note_id": "N001",
+          "similarity": 0.5741
+        },
+        {
+          "note_id": "N003",
+          "similarity": 0.5365
+        },
+        {
+          "note_id": "N009",
+          "similarity": 0.4711
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4391
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4009
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N001",
+          "passed": true,
+          "rejection": null,
+          "detail": "passes all rules: scope, window, direction, magnitude"
+        },
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2025-02-24..2025-03-02"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-03-17..2025-03-23 does not overlap week 2025-02-24..2025-03-02"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Chennai-Bangalore"
+        }
+      ]
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-03",
+      "route_type": "Medium",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.4762,
+      "own_pct": 22.78,
+      "sim_pct": 31.98,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": true,
+      "matched_note_id": "N001",
+      "matched_similarity": 0.5805,
+      "used_backfill": false,
+      "retrieved": [
+        {
+          "note_id": "N001",
+          "similarity": 0.5805
+        },
+        {
+          "note_id": "N003",
+          "similarity": 0.5455
+        },
+        {
+          "note_id": "N009",
+          "similarity": 0.4697
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4392
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3985
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N001",
+          "passed": true,
+          "rejection": null,
+          "detail": "passes all rules: scope, window, direction, magnitude"
+        },
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2025-03-03..2025-03-09"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-03-17..2025-03-23 does not overlap week 2025-03-03..2025-03-09"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-03-03..2025-03-09"
+        }
+      ]
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-10",
+      "route_type": "Medium",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.5717,
+      "own_pct": 22.08,
+      "sim_pct": 33.84,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N001",
+          "similarity": 0.5765
+        },
+        {
+          "note_id": "N003",
+          "similarity": 0.5465
+        },
+        {
+          "note_id": "N009",
+          "similarity": 0.478
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4357
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3979
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-02-24..2025-03-08 does not overlap week 2025-03-10..2025-03-16"
+        },
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2025-03-10..2025-03-16"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-03-17..2025-03-23 does not overlap week 2025-03-10..2025-03-16"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-03-10..2025-03-16"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-03-10..2025-03-16"
+        }
+      ]
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-17",
+      "route_type": "Medium",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.4692,
+      "own_pct": 13.69,
+      "sim_pct": 33.48,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N001",
+          "similarity": 0.5746
+        },
+        {
+          "note_id": "N003",
+          "similarity": 0.5412
+        },
+        {
+          "note_id": "N009",
+          "similarity": 0.4688
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.4327
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3971
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-02-24..2025-03-08 does not overlap week 2025-03-17..2025-03-23"
+        },
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-05-05..ongoing does not overlap week 2025-03-17..2025-03-23"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "direction",
+          "detail": "note describes normal/stable conditions or explicitly says costs were not affected"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-03-17..2025-03-23"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Chennai-Bangalore"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-03-17..2025-03-23"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-06-23",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 3.7622,
+      "own_pct": 6.2,
+      "sim_pct": 20.56,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5565
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4659
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4392
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3942
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3796
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 20.6% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-06-23..2025-06-29"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-06-23..2025-06-29"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-09-15",
+      "route_type": "Short",
+      "n_shipments": 4,
+      "cost_per_tonne_km": 3.9808,
+      "own_pct": 9.25,
+      "sim_pct": 23.63,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.564
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4485
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4289
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3833
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3783
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 23.6% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-09-15..2025-09-21"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-09-15..2025-09-21"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-06",
+      "route_type": "Short",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.9419,
+      "own_pct": 5.36,
+      "sim_pct": 22.89,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.557
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4617
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4375
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.39
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3798
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 22.9% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-10-06..2025-10-12"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-10-06..2025-10-12"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-20",
+      "route_type": "Short",
+      "n_shipments": 4,
+      "cost_per_tonne_km": 4.0953,
+      "own_pct": 7.69,
+      "sim_pct": 24.83,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5563
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4538
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4293
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3827
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3726
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 24.8% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-10-20..2025-10-26"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-10-20..2025-10-26"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-27",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.0732,
+      "own_pct": 5.5,
+      "sim_pct": 28.26,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.562
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.455
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4286
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3817
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3729
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 28.3% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-10-27..2025-11-02"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "direction",
+          "detail": "note describes normal/stable conditions or explicitly says costs were not affected"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-03",
+      "route_type": "Short",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 4.1994,
+      "own_pct": 7.36,
+      "sim_pct": 24.07,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.562
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4517
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.433
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3902
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3807
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 24.1% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-11-03..2025-11-09"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-11-03..2025-11-09"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-10",
+      "route_type": "Short",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 3.968,
+      "own_pct": -0.09,
+      "sim_pct": 21.43,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5612
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4484
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4322
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3903
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3835
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 21.4% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-11-10..2025-11-16"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-11-10..2025-11-16"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-17",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.3221,
+      "own_pct": 8.87,
+      "sim_pct": 31.61,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5592
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4487
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4284
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3851
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3766
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 31.6% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-11-17..2025-11-23"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-11-17..2025-11-23"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-24",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.1564,
+      "own_pct": 2.99,
+      "sim_pct": 23.05,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5618
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4565
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.433
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3885
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3854
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 23.0% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-11-24..2025-11-30"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-11-24..2025-11-30"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-01",
+      "route_type": "Short",
+      "n_shipments": 5,
+      "cost_per_tonne_km": 4.3928,
+      "own_pct": 7.73,
+      "sim_pct": 37.39,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5535
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4546
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4353
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3867
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3777
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 37.4% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-12-01..2025-12-07"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-12-01..2025-12-07"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-08",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.4319,
+      "own_pct": 7.2,
+      "sim_pct": 38.8,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5539
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4533
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4342
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3885
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3844
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 38.8% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-12-08..2025-12-14"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-12-08..2025-12-14"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-15",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.3881,
+      "own_pct": 4.36,
+      "sim_pct": 35.5,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5587
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4496
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4243
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3792
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3736
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 35.5% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-12-15..2025-12-21"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-12-15..2025-12-21"
+        }
+      ]
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-22",
+      "route_type": "Short",
+      "n_shipments": 3,
+      "cost_per_tonne_km": 4.4853,
+      "own_pct": 5.75,
+      "sim_pct": 38.91,
+      "own_history_weeks_used": 8,
+      "partial_history": false,
+      "justified": false,
+      "matched_note_id": "",
+      "matched_similarity": null,
+      "used_backfill": true,
+      "retrieved": [
+        {
+          "note_id": "N003",
+          "similarity": 0.5481
+        },
+        {
+          "note_id": "N005",
+          "similarity": 0.4535
+        },
+        {
+          "note_id": "N001",
+          "similarity": 0.4269
+        },
+        {
+          "note_id": "N006",
+          "similarity": 0.3813
+        },
+        {
+          "note_id": "N008",
+          "similarity": 0.3739
+        }
+      ],
+      "decisions": [
+        {
+          "note_id": "N003",
+          "passed": false,
+          "rejection": "peer_divergence",
+          "detail": "note applies to all routes, so it cannot explain a 38.9% divergence vs similar-length routes (peers are equally affected)"
+        },
+        {
+          "note_id": "N005",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Mumbai-Delhi, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N001",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N006",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-09-22..2025-09-28 does not overlap week 2025-12-22..2025-12-28"
+        },
+        {
+          "note_id": "N008",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Kolkata-Bhubaneswar, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N002",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Ahmedabad-Mumbai, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N004",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to no route in this dataset, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N007",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Delhi-Jaipur, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N009",
+          "passed": false,
+          "rejection": "scope",
+          "detail": "note applies to Chennai-Bangalore, not Mumbai-Pune"
+        },
+        {
+          "note_id": "N010",
+          "passed": false,
+          "rejection": "window",
+          "detail": "note window 2025-10-27..2025-11-02 does not overlap week 2025-12-22..2025-12-28"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Deterministic pipeline that aggregates weekly freight costs per route, flags cost spikes against own-history and peer baselines, retrieves contextual notes via RAG, adjudicates justifications with strict rules, and produces a graded anomaly report.

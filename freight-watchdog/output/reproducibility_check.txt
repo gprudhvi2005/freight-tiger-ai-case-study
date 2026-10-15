@@ -1,0 +1,17 @@
+# Reproducibility check -- three untouched runs, same input
+
+## Deterministic mode (python -m src.main run --no-llm)
+
+- run 1 sha256: 4525068095ab7723cea5c3a900133cc0ceb8b8e961c62139787850a7c1e18efa
+- run 2 sha256: 4525068095ab7723cea5c3a900133cc0ceb8b8e961c62139787850a7c1e18efa
+- run 3 sha256: 4525068095ab7723cea5c3a900133cc0ceb8b8e961c62139787850a7c1e18efa
+- byte-identical across 3 runs: YES
+
+## LLM mode (python -m src.main run; temperature 0, seed 42, model openai/gpt-oss-20b)
+
+- graded fields (route, week_of, cost_per_tonne_km, vs_own_history, vs_similar_routes, flagged, matched_note_id) identical across 3 runs: YES
+- reason wording also identical: NO (the hosted reasoning model is not bit-deterministic even at temperature 0; the graded fields above are computed deterministically and are identical, which is what the brief requires -- verdicts never depend on the LLM)
+
+## Verdict
+
+PASS -- three untouched runs produced identical flags, numbers and note citations.

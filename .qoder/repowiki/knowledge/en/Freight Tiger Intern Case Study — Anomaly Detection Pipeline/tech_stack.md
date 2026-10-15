@@ -1,0 +1,1 @@
+CSV-only data exchange between the child pipeline and the static datasets; no shared library or config file lives at the root.

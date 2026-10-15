@@ -1,0 +1,10 @@
+The module is a layered Python package under `src/` orchestrated by `main.py` (CLI) and `pipeline.py` (single `run_pipeline` entry point).
+
+- Data layer: `data_loader.py` loads the three CSVs (`shipment_records.csv`, `context_notes.csv`, `sample_output_format_v2.csv`) into pandas frames; `config.py` centralizes every tunable (paths, thresholds, model names, env/.env loader).
+- Analytics layer: `weekly_metrics.py` computes tonne-km weighted `cost_per_tonne_km` per route-week plus two graded baselines (`vs_own_history` trailing 8-week mean, `vs_similar_routes` leave-one-out same-week peer mean); `detector.py` selects candidates breaching either 20% threshold.
+- AI layer: `notes_kb.py` embeds context notes with `sentence-transformers/all-MiniLM-L6-v2` and performs cosine top-5 retrieval; `adjudicator.py` parses free-text notes into structured facts (scope/window/direction/magnitude) and applies four deterministic justification rules; `llm_client.py` wraps an OpenAI-compatible API for prose generation at temperature 0 with fixed seed; `explainer.py` pins facts and falls back to a deterministic template when no LLM is configured.
+- Orchestration: `pipeline.py` wires the stages in order, runs a recall backfill over all notes when top-5 retrieval yields no justification, serializes `anomaly_report.csv` and `run_diagnostics.json`, and logs token usage.
+- Stretch: `qa.py` answers questions over the assistant's own findings using the same LLM/template path.
+- Evaluation & tooling: `tests/test_core.py` (17 unit tests), `eval/run_eval.py` (36-check harness against `labeled_set.csv`), `scripts/run_reproducibility.py` (three fresh-process runs compared by sha256), `scripts/make_charts.py`.
+
+Dependency direction is strictly one-way: CLI → pipeline → {data_loader, weekly_metrics, detector, notes_kb, adjudicator, llm_client, explainer, qa}, with `config` as the shared constants root. Verdicts and numbers are pure pandas; the LLM only words explanations/Q&A.

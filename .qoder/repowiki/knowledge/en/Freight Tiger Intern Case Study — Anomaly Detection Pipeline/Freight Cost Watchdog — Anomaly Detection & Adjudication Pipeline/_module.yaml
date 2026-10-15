@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: freight_watchdog
+title: Freight Cost Watchdog — Anomaly Detection & Adjudication Pipeline
+scope:
+    - freight-watchdog/
+source_files: []
+depends_on: []
+related_to: []

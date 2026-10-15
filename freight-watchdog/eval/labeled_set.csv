@@ -1,0 +1,28 @@
+kind,route,week_of,expected_flagged,expected_matched_note_id,why
+candidate,Delhi-Jaipur,2024-11-11,Yes,,sample row 1: +35.5% spike; no note applies (N007 is a road improvement dated 2024-05-20)
+candidate,Delhi-Jaipur,2024-11-18,Yes,,planted spike continues; no applicable note
+candidate,Ahmedabad-Mumbai,2025-01-20,No (justified),N002,sample row 2: regional festival week surcharge
+candidate,Chennai-Bangalore,2025-02-24,No (justified),N001,flood disruption window Feb 24 - Mar 8
+candidate,Chennai-Bangalore,2025-03-03,No (justified),N001,flood disruption window Feb 24 - Mar 8
+candidate,Chennai-Bangalore,2025-03-10,Yes,,flood note window ended Mar 8 (roads passable Mar 9); N009 confirms normal from Mar 17
+candidate,Chennai-Bangalore,2025-03-17,Yes,,outside flood window; N009 says conditions returned to normal
+candidate,Mumbai-Pune,2025-06-23,Yes,,drift onset; no route-specific note; N003 affects all routes equally
+candidate,Mumbai-Pune,2025-09-15,Yes,,sample row 3: +23.6% vs peers; N006 explicitly not a reason
+candidate,Mumbai-Pune,2025-10-06,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-10-20,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-10-27,Yes,,sustained unexplained drift; N010 (same week) says costs absorbed without rate change
+candidate,Mumbai-Pune,2025-11-03,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-11-10,Yes,,sustained unexplained drift (own-history baseline has caught up; peer gap remains)
+candidate,Mumbai-Pune,2025-11-17,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-11-24,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-12-01,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-12-08,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-12-15,Yes,,sustained unexplained drift
+candidate,Mumbai-Pune,2025-12-22,Yes,,sustained unexplained drift
+negative,Mumbai-Delhi,2025-05-12,No,,highest Mumbai-Delhi week (+9.5% vs history) is below threshold; N003 covers at most ~7%
+negative,Kolkata-Bhubaneswar,2025-06-09,No,,N008 trap week: note explicitly reports no disruptions
+negative,Mumbai-Delhi,2024-07-29,No,,N005 trap week: maintenance with costs not significantly affected
+negative,Delhi-Jaipur,2024-05-20,No,,N007 road improvement (wrong direction for a rise and no spike that week)
+negative,Mumbai-Pune,2024-06-10,No,,normal week well before the late-2025 drift
+negative,Chennai-Bangalore,2024-02-05,No,,normal week a year before the flood
+negative,Delhi-Chennai,2024-06-17,No,,quiet distractor route (Coromandel Carriers)

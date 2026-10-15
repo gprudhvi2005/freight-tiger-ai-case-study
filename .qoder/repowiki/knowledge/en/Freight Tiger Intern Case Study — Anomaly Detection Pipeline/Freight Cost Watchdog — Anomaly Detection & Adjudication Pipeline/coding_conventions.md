@@ -1,0 +1,6 @@
+- All tunables (thresholds, model names, rounding decimals, paths) live in `src/config.py` and are imported by consumers rather than duplicated, keeping the system reproducible from one place.
+- Verdict-producing code paths (detection, adjudication, metrics) are pure pandas functions with no side effects; LLM calls are isolated behind `llm_client.LLMClient` so the core pipeline can run with `use_llm=False`.
+- Explanation prose is generated at temperature 0 with a fixed seed and pinned factual context, falling back to a deterministic template when no LLM is available — never allowing the LLM to alter verdicts or numbers.
+- Note parsing is pattern-based (dates, percentages, direction phrases) producing structured facts with a `parse_rationale` field, and no note id is hard-coded anywhere in the codebase.
+- Pipeline stages log progress with numbered `[N/6]` markers and write artifacts (`anomaly_report.csv`, `run_diagnostics.json`, `token_cost_log.md`) through `config.OUTPUT_DIR` after each run.
+- CLI commands are registered as argparse subparsers in `main.py` with `set_defaults(func=...)`, and heavy imports inside command handlers are deferred until the command actually runs.
